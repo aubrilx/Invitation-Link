@@ -27,11 +27,13 @@ function moveButton() {
   noBtn.style.top = `${y}px`;
 });
 
-// SHOW reasons when trying to click NO
-noBtn.addEventListener("mouseenter", () => {
+function showReason() {
   message.innerText = reasons[noClickCount % reasons.length];
   noClickCount++;
-});
+}
+
+noBtn.addEventListener("mouseenter", showReason); // desktop
+noBtn.addEventListener("touchstart", showReason); // mobile
 
 // YES CLICK → animation
 yesBtn.addEventListener("click", () => {
