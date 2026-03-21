@@ -16,7 +16,9 @@ const reasons = [
 ];
 
 noBtn.addEventListener("touchstart", moveButton);
-noBtn.addEventListener("mouseover", () => {
+noBtn.addEventListener("mouseover", moveButton);
+
+function moveButton() {
   const x = Math.random() * (window.innerWidth - 100);
   const y = Math.random() * (window.innerHeight - 50);
 
