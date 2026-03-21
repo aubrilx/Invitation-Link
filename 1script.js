@@ -15,7 +15,7 @@ const reasons = [
   "बस भी करो 😭❤️"
 ];
 
-// MOVE button (works on hover)
+noBtn.addEventListener("touchstart", moveButton);
 noBtn.addEventListener("mouseover", () => {
   const x = Math.random() * (window.innerWidth - 100);
   const y = Math.random() * (window.innerHeight - 50);
