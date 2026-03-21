@@ -15,25 +15,30 @@ const reasons = [
   "बस भी करो 😭❤️"
 ];
 
-noBtn.addEventListener("touchstart", moveButton);
-noBtn.addEventListener("mouseover", moveButton);
+function handleNoInteraction() {
+  // Show reason
+  message.innerText = reasons[noClickCount % reasons.length];
+  noClickCount++;
 
-function moveButton() {
+  // Move button
   const x = Math.random() * (window.innerWidth - 100);
   const y = Math.random() * (window.innerHeight - 50);
 
   noBtn.style.position = "absolute";
   noBtn.style.left = `${x}px`;
   noBtn.style.top = `${y}px`;
-});
 
-function showReason() {
-  message.innerText = reasons[noClickCount % reasons.length];
-  noClickCount++;
+  // Optional: vibration on mobile
+  if (navigator.vibrate) {
+    navigator.vibrate(100);
+  }
 }
 
-noBtn.addEventListener("mouseenter", showReason); // desktop
-noBtn.addEventListener("touchstart", showReason); // mobile
+// Desktop
+noBtn.addEventListener("mouseenter", handleNoInteraction);
+
+// Mobile
+noBtn.addEventListener("touchstart", handleNoInteraction);
 
 // YES CLICK → animation
 yesBtn.addEventListener("click", () => {
