@@ -5,14 +5,14 @@ const message = document.getElementById("message");
 let noClickCount = 0;
 
 const reasons = [
-  "Are you sure? 😢",
-  "Think again 😭",
-  "Last chance 🥺",
-  "You're breaking my heart 💔",
-  "Please don't say no 😩",
-  "I’ll cry 😭",
-  "Okay now you're just being mean 😤",
-  "बस भी करो 😭❤️"
+  "Dadami garapata sa puke nyo!",
+  "WAHAHAHHAAHHAAHAH",
+  "Tangina nyooooo",
+  "Y'all breaking my heart. Ouch agay💔",
+  "Please don't say no, gays",
+  "Leave na ako. Ayaw niyo ako pansinin",
+  "May garapata ka sa puke",
+  "luhhhh"
 ];
 
 function handleNoInteraction() {
@@ -44,8 +44,8 @@ noBtn.addEventListener("touchstart", handleNoInteraction);
 yesBtn.addEventListener("click", () => {
   document.body.innerHTML = `
     <div class="yes-screen">
-      <h1>YAYYYYYY!!! ❤️😍</h1>
-      <p>See you on the date 😉</p>
+      <h1>Tsk ako paba? Matitiis nyo? Hays</h1>
+      <p>See you on Online Inuman</p>
       <div class="hearts"></div>
     </div>
   `;
